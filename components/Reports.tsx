@@ -39,7 +39,7 @@ const Reports: React.FC = () => {
     return acc;
   }, {} as Record<string, number>);
 
-  const maxMonthly = Math.max(...Object.values(monthlySales), 1);
+  const maxMonthly = Math.max(...(Object.values(monthlySales) as number[]), 1);
 
   const handleAiAnalysis = async () => {
     setLoadingAi(true);
@@ -107,7 +107,7 @@ const Reports: React.FC = () => {
             {Object.keys(monthlySales).length === 0 ? (
               <p className="text-gray-400 self-center">Sin datos suficientes</p>
             ) : (
-              Object.entries(monthlySales).map(([month, total]) => (
+              (Object.entries(monthlySales) as [string, number][]).map(([month, total]) => (
                 <div key={month} className="flex flex-col items-center w-full">
                   <div className="relative group w-full flex justify-center">
                     <div 
