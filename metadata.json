@@ -1,0 +1,5 @@
+{
+  "name": "FrutiPOS",
+  "description": "Sistema de Punto de Venta (POS) moderno para fruterías con gestión de inventario, finanzas, facturación y análisis con IA.",
+  "requestFramePermissions": []
+}
